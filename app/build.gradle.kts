@@ -2,6 +2,7 @@ plugins {
     id("java")
     kotlin("jvm")
     application
+    checkstyle
 }
 
 group = "hexlet.code"
@@ -12,7 +13,7 @@ repositories {
 }
 
 dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.10.0"))
+    testImplementation(platform("org.junit:junit-bom:5.10.3"))
     testImplementation("org.junit.jupiter:junit-jupiter")
     implementation(kotlin("stdlib-jdk8"))
 }
@@ -27,3 +28,8 @@ kotlin {
 application {
     mainClass = "hexlet.code.App"
 }
+
+tasks.getByName("run", JavaExec::class) {
+    standardInput = System.`in`
+}
+
