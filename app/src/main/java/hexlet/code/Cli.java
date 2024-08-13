@@ -6,9 +6,11 @@ public class Cli {
 
         Scanner name = new Scanner(System.in);
 
-        System.out.println("May i have your name?");
+        System.out.println("Welcome to the Brain Games!\nMay i have your name?");
         String newName = name.next();
 
         System.out.println("Hello, " + newName + "!");
+
+        name.close();
     }
 }
