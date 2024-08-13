@@ -5,6 +5,7 @@ public class Even {
     public static void isEven() {
         Cli.greetings();
 
+        String userName = Cli.newName;
         int countRightAnswer = 0;
         int currentNumber;
         String correctAnswer;
@@ -15,7 +16,7 @@ public class Even {
 
         while (countRightAnswer < 3) {
 
-            currentNumber = (int) + (Math.random() * 100);
+            currentNumber = (int) (Math.random() * 100);
             if (currentNumber % 2 == 0) {
                 correctAnswer = "yes";
             }
@@ -32,10 +33,12 @@ public class Even {
             else {
                 countRightAnswer = 0;
                 System.out.println("'" + userAnswer + "'" + " is wrong answer ;(. Correct answer was" + " '" + correctAnswer + "'.\nLet's try again!");
+                break;
             }
 
-            System.out.println("Congratulations!");
-            answer.close();
+        }
+        if (countRightAnswer == 3) {
+            System.out.println("Congratulations, " + userName + "!");
         }
     }
 }
