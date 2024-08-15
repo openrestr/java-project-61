@@ -5,7 +5,6 @@ public class Even {
     public static void isEven() {
         Cli.greetings();
 
-        String userName = Cli.newName;
         int countRightAnswer = 0;
         int currentNumber;
         String correctAnswer;
@@ -38,7 +37,7 @@ public class Even {
 
         }
         if (countRightAnswer == 3) {
-            System.out.println("Congratulations, " + userName + "!");
+            System.out.println("Congratulations, " + Cli.newName + "!");
         }
     }
 }
