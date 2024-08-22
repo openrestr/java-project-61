@@ -13,6 +13,7 @@ public class App {
                 1 - Greet
                 2 - Even
                 3 - Calc
+                4 - GCD
                 0 - Exit
                 """);
              answer = input.nextInt();
@@ -22,6 +23,7 @@ public class App {
                 case 1 -> Cli.greetings();
                 case 2 -> Even.isEven();
                 case 3 -> Calculator.mathGame();
+                case 4 -> GCD.gcdGame();
             }
         }
     }
