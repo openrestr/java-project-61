@@ -1,25 +1,28 @@
 package hexlet.code;
+
 import java.util.Scanner;
+import hexlet.code.games.*;
 
 public class App {
+    public static int answer;
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
 
-        System.out.println("Please enter the number and press Enter.\n1 - Greet\n2 - Even\n3 - Calc \n0 - Exit");
-        int answer = input.nextInt();
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.println("""
+                Please enter the number and press Enter.
+                1 - Greet
+                2 - Even
+                3 - Calc
+                0 - Exit
+                """);
+             answer = input.nextInt();
 
-        switch (answer) {
+            switch (answer) {
 
-            case 1:
-                Cli.greetings();
-                break;
-
-            case 2:
-                Even.isEven();
-                break;
-
-            case 3:
-                Calculator.mathGame();
+                case 1 -> Cli.greetings();
+                case 2 -> Even.isEven();
+                case 3 -> Calculator.mathGame();
+            }
         }
     }
 }
