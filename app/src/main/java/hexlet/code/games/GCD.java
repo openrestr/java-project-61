@@ -19,8 +19,8 @@ public class GCD {
 
         for (int i = 0; i < 3; i++) {
 
-            int number1 = (int) (Math.random() * 11 + 1);
-            int number2 = (int) (Math.random() * 11 + 1);
+            int number1 = (int) (Math.random() * 11);
+            int number2 = (int) (Math.random() * 11);
             String question = number1 + " " + number2;
             int correctAnswer;
 
