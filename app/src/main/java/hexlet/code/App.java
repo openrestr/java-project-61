@@ -30,7 +30,6 @@ public class App {
                 case 4 -> GCD.gcdGame();
                 case 5 -> Progression.progressionGame();
                 case 6 -> Prime.isPrimeGame();
-                case 0 -> System.out.println("Bye, have a nice day!");
             }
         }
     }
