@@ -9,6 +9,7 @@ public class App {
 
         try (Scanner input = new Scanner(System.in)) {
             System.out.println("""
+                /Let's try again, Tirion!/
                 /Congratulations, Tirion!/
                 /May I have your name?/
                 Please enter the number and press Enter.
