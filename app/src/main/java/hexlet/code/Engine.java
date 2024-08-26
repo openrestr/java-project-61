@@ -22,8 +22,7 @@ public class Engine {
                 countRightAnswer++;
                 System.out.println("Correct!");
             } else {
-                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '"
-                        + correctAnswer + "'.\nLet's try again!");
+                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'.\nLet's try again!");
                 return;
             }
         }
