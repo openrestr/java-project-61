@@ -15,10 +15,11 @@ public class App {
                 3 - Calc
                 4 - GCD
                 5 - Progression
-                0 - Exit 
-                """);
+                6 - Prime
+                0 - Exit\s""");
 
-             answer = input.nextInt();
+            System.out.print("Your choice: ");
+            answer = input.nextInt();
 
             switch (answer) {
 
@@ -27,6 +28,7 @@ public class App {
                 case 3 -> Calculator.mathGame();
                 case 4 -> GCD.gcdGame();
                 case 5 -> Progression.progressionGame();
+                case 6 -> Prime.isPrimeGame();
             }
         }
     }

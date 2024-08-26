@@ -21,7 +21,7 @@ public class Progression {
         for (int i = 0; i < 3; i++) {
             int minLength = 5;
             int maxLength = 10;
-            int progressionLength = (int) (Math.random() * ++maxLength) + minLength;
+            int progressionLength = (int) (Math.random() * (maxLength - minLength + 1) + minLength);
             int startOfProgression = (int) (Math.random() * 10 + 1);
             int progressionStep = (int) (Math.random() * 5 + 1);
 
