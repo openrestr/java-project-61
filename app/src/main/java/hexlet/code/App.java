@@ -14,8 +14,10 @@ public class App {
                 2 - Even
                 3 - Calc
                 4 - GCD
-                0 - Exit
+                5 - Progression
+                0 - Exit 
                 """);
+
              answer = input.nextInt();
 
             switch (answer) {
@@ -24,6 +26,7 @@ public class App {
                 case 2 -> Even.isEven();
                 case 3 -> Calculator.mathGame();
                 case 4 -> GCD.gcdGame();
+                case 5 -> Progression.progressionGame();
             }
         }
     }
