@@ -19,12 +19,11 @@ public class GCD {
 
         for (int i = 0; i < 3; i++) {
 
-            int number1 = (int) (Math.random() * 11);
-            int number2 = (int) (Math.random() * 11);
+            int number1 = (int) (Math.random() * 11 + 1);
+            int number2 = (int) (Math.random() * 11 + 1);
             String question = number1 + " " + number2;
             int correctAnswer;
 
-            if (number1 <= 0 || number2 <= 0) throw new UnsupportedOperationException("Incorrect input");
             while(number1 != 0 && number2 != 0){
                 if (number1 > number2) number1 = number1 % number2;
                 else number2 = number2 % number1;
