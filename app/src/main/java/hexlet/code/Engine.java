@@ -27,7 +27,7 @@ public class Engine {
             }
         }
         if (countRightAnswer == 3) {
-            System.out.println("Congratulations " + Cli.newName + "!");
+            System.out.println("Congratulations, " + Cli.newName + "!");
         }
     }
 }
