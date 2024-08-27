@@ -1,7 +1,13 @@
 package hexlet.code;
 
+import hexlet.code.games.Calculator;
+import hexlet.code.games.Even;
+import hexlet.code.games.GCD;
+import hexlet.code.games.Prime;
+import hexlet.code.games.Progression;
+
 import java.util.Scanner;
-import hexlet.code.games.*;
+
 
 public class App {
     public static int answer;
@@ -29,6 +35,7 @@ public class App {
                 case 4 -> GCD.gcdGame();
                 case 5 -> Progression.progressionGame();
                 case 6 -> Prime.isPrimeGame();
+                default -> System.out.println("out of input");
             }
         }
     }

@@ -1,10 +1,12 @@
 package hexlet.code.games;
 
-import hexlet.code.*;
+
+import hexlet.code.Cli;
+import hexlet.code.Engine;
 
 public class Calculator {
 
-    public static void mathGame () {
+    public static void mathGame() {
         String gameDescription = "What is the result of the expression?";
         String[][] questionsAndAnswers = generateQuestions();
 

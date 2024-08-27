@@ -25,7 +25,7 @@ public class Progression {
             int startOfProgression = (int) (Math.random() * 10 + 1);
             int progressionStep = (int) (Math.random() * 5 + 1);
 
-            String[] progression = new String [progressionLength];
+            String[] progression = new String[progressionLength];
 
             for (int j = 0; j < progressionLength; j++) {
                 progression[j] = String.valueOf(startOfProgression + j * progressionStep);
