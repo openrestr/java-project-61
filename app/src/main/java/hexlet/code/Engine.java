@@ -23,10 +23,11 @@ public class Engine {
                 System.out.println("Correct!");
             } else {
                 System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'.\nLet's try again!");
-                return;
+                break;
             }
         }
-
-        System.out.println("Congratulations " + Cli.newName + "!");
+        if (countRightAnswer == 3) {
+            System.out.println("Congratulations " + Cli.newName + "!");
+        }
     }
 }
