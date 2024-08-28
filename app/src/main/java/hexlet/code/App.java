@@ -36,7 +36,8 @@ public class App {
                 case "4" -> GCD.gcdGame();
                 case "5" -> Progression.progressionGame();
                 case "6" -> Prime.isPrimeGame();
-                default -> System.out.println("out of input");
+                case "0" -> System.out.println("Bye!");
+                default -> throw new RuntimeException("Incorrect input.");
             }
         }
     }
