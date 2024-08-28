@@ -15,10 +15,13 @@ public class Even {
     }
 
     private static String[][] generateQuestions() {
-        String[][] questionsAndAnswers = new String[3][2];
+        final int rounds = 3;
+        final int questionsCount = 3;
+        final int maxLengthOfGenerator = 100;
+        String[][] questionsAndAnswers = new String[questionsCount][2];
 
-        for (int i = 0; i < 3; i++) {
-            int number = (int) (Math.random() * 100);
+        for (int i = 0; i < rounds; i++) {
+            int number = (int) (Math.random() * maxLengthOfGenerator);
             String correctAnswer = (number % 2 == 0) ? "yes" : "no";
 
             questionsAndAnswers[i][0] = String.valueOf(number);

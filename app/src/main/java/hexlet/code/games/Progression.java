@@ -16,14 +16,18 @@ public class Progression {
     }
 
     private static String[][] generateQuestions() {
-        String[][] questionsAndAnswers = new String[3][2];
+        final int minLength = 5;
+        final int maxLength = 10;
+        final int rounds = 3;
+        final int questionsCount = 3;
 
-        for (int i = 0; i < 3; i++) {
-            int minLength = 5;
-            int maxLength = 10;
+        String[][] questionsAndAnswers = new String[questionsCount][2];
+
+        for (int i = 0; i < rounds; i++) {
+
             int progressionLength = (int) (Math.random() * (maxLength - minLength + 1) + minLength);
-            int startOfProgression = (int) (Math.random() * 10 + 1);
-            int progressionStep = (int) (Math.random() * 5 + 1);
+            int startOfProgression = (int) (Math.random() * maxLength + 1);
+            int progressionStep = (int) (Math.random() * minLength + 1);
 
             String[] progression = new String[progressionLength];
 

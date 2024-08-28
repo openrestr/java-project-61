@@ -10,6 +10,7 @@ public class Engine {
         System.out.println(gameDescription);
 
         int countRightAnswer = 0;
+        final int winRoundsToWin = 3;
 
         for (String[] questionAndAnswer : questionsAndAnswers) {
             String question = questionAndAnswer[0];
@@ -23,12 +24,12 @@ public class Engine {
                 System.out.println("Correct!");
             } else {
                 System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + correctAnswer
-                        + "'.\nLet's try again, " + Cli.newName + "!");
+                        + "'.\nLet's try again, " + Cli.getName() + "!");
                 break;
             }
         }
-        if (countRightAnswer == 3) {
-            System.out.println("Congratulations, " + Cli.newName + "!");
+        if (countRightAnswer == winRoundsToWin) {
+            System.out.println("Congratulations, " + Cli.getName() + "!");
         }
     }
 }

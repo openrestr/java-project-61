@@ -15,12 +15,17 @@ public class Calculator {
     }
 
     private static String[][] generateQuestions() {
-        String[][] questionsAndAnswers = new String[3][2];
+        final int rounds = 3;
+        final int questionsCount = 3;
+        final int operatorsCount = 3;
+        final int maxLengthOfGenerator = 11;
 
-        for (int i = 0; i < 3; i++) {
-            int operator = (int) (Math.random() * 3);
-            int number1 = (int) (Math.random() * 11);
-            int number2 = (int) (Math.random() * 11);
+        String[][] questionsAndAnswers = new String[questionsCount][2];
+
+        for (int i = 0; i < rounds; i++) {
+            int operator = (int) (Math.random() * operatorsCount);
+            int number1 = (int) (Math.random() * maxLengthOfGenerator);
+            int number2 = (int) (Math.random() * maxLengthOfGenerator);
             String question;
             int correctAnswer;
 

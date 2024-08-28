@@ -15,10 +15,14 @@ public class Prime {
     }
 
     private static String[][] generateQuestions() {
-        String[][] questionsAndAnswers = new String[3][2];
+        final int rounds = 3;
+        final int questionsCount = 3;
+        final int maxLengthOfGenerator = 30;
 
-        for (int i = 0; i < 3; i++) {
-            int number = (int) (Math.random() * 30 + 1);
+        String[][] questionsAndAnswers = new String[questionsCount][2];
+
+        for (int i = 0; i < rounds; i++) {
+            int number = (int) (Math.random() * maxLengthOfGenerator + 1);
             String correctAnswer = isPrime(number) ? "yes" : "no";
 
             questionsAndAnswers[i][0] = String.valueOf(number);
