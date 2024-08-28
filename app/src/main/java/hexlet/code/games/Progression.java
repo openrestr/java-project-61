@@ -25,8 +25,8 @@ public class Progression {
 
         for (int i = 0; i < rounds; i++) {
 
-            int progressionLength = (int) (Math.random() * (maxLength - minLength + 1) + minLength);
-            int startOfProgression = (int) (Math.random() * maxLength + 1);
+            int progressionLength = (int) (Math.random() * (maxLength - minLength + 1)) + minLength;
+            int startOfProgression = (int) (Math.random() * maxLength);
             int progressionStep = (int) (Math.random() * minLength + 1);
 
             String[] progression = new String[progressionLength];
@@ -35,13 +35,13 @@ public class Progression {
                 progression[j] = String.valueOf(startOfProgression + j * progressionStep);
             }
 
-            int hiddenIndex = (int) (Math.random() * progressionLength + 1);
+            int hiddenIndex = (int) (Math.random() * progressionLength);
             String correctAnswer = progression[hiddenIndex];
             progression[hiddenIndex] = "..";
 
             String question = String.join(" ", progression);
             questionsAndAnswers[i][0] = question;
-            questionsAndAnswers[i][1] = String.valueOf(correctAnswer);
+            questionsAndAnswers[i][1] = correctAnswer;
 
         }
         return questionsAndAnswers;
