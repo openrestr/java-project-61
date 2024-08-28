@@ -37,7 +37,7 @@ public class App {
                 case "5" -> Progression.progressionGame();
                 case "6" -> Prime.isPrimeGame();
                 case "0" -> System.out.println("Bye!");
-                default -> throw new RuntimeException("Incorrect input.");
+                default -> System.out.println("There is no choice from answer.");
             }
         }
     }
