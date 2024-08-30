@@ -4,13 +4,15 @@ import java.util.Scanner;
 
 public class Engine {
 
+    private static final int ROUNDS = 3;
+
     public static void playGame(String gameDescription, String[][] questionsAndAnswers) {
         Scanner answer = new Scanner(System.in);
 
         System.out.println(gameDescription);
 
         int countRightAnswer = 0;
-        final int winRoundsToWin = 3;
+
 
         for (String[] questionAndAnswer : questionsAndAnswers) {
             String question = questionAndAnswer[0];
@@ -28,8 +30,12 @@ public class Engine {
                 break;
             }
         }
-        if (countRightAnswer == winRoundsToWin) {
+        if (countRightAnswer == ROUNDS) {
             System.out.println("Congratulations, " + Cli.getName() + "!");
         }
+    }
+
+    public static int getRounds() {
+        return ROUNDS;
     }
 }

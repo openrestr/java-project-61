@@ -15,12 +15,11 @@ public class GCD {
     }
 
     private static String[][] generateQuestions() {
-        final int rounds = 3;
-        final int questionsCount = 3;
-        final int maxLengthOfGenerator = 11;
-        String[][] questionsAndAnswers = new String[questionsCount][2];
 
-        for (int i = 0; i < rounds; i++) {
+        final int maxLengthOfGenerator = 11;
+        String[][] questionsAndAnswers = new String[Engine.getRounds()][2];
+
+        for (int i = 0; i < Engine.getRounds(); i++) {
 
             int number1 = (int) (Math.random() * maxLengthOfGenerator + 1);
             int number2 = (int) (Math.random() * maxLengthOfGenerator + 1);
