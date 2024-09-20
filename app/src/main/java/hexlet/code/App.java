@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class App {
 
     public static void main(String[] args) {
-        String answer;
+
 
         try (Scanner input = new Scanner(System.in)) {
             System.out.println("""
@@ -26,7 +26,7 @@ public class App {
                 0 - Exit\s""");
 
             System.out.print("Your choice: ");
-            answer = input.next();
+            String answer = input.nextLine();
 
             switch (answer) {
 
@@ -41,6 +41,7 @@ public class App {
             }
         }
     }
+
 }
 
 

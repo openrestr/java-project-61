@@ -1,7 +1,5 @@
 package hexlet.code.games;
 
-
-import hexlet.code.Cli;
 import hexlet.code.Engine;
 
 public class Calculator {
@@ -10,7 +8,6 @@ public class Calculator {
         String gameDescription = "What is the result of the expression?";
         String[][] questionsAndAnswers = generateQuestions();
 
-        Cli.greetings();
         Engine.playGame(gameDescription, questionsAndAnswers);
     }
 
@@ -18,9 +15,9 @@ public class Calculator {
         final int operatorsCount = 3;
         final int maxLengthOfGenerator = 11;
 
-        String[][] questionsAndAnswers = new String[Engine.getRounds()][2];
+        String[][] questionsAndAnswers = new String[Engine.ROUNDS][2];
 
-        for (int i = 0; i < Engine.getRounds(); i++) {
+        for (int i = 0; i < Engine.ROUNDS; i++) {
             int operator = (int) (Math.random() * operatorsCount);
             int number1 = (int) (Math.random() * maxLengthOfGenerator);
             int number2 = (int) (Math.random() * maxLengthOfGenerator);

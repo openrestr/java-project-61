@@ -4,9 +4,10 @@ import java.util.Scanner;
 
 public class Engine {
 
-    private static final int ROUNDS = 3;
+    public static final int ROUNDS = 3;
 
     public static void playGame(String gameDescription, String[][] questionsAndAnswers) {
+        String userName = Cli.greetings();
         Scanner answer = new Scanner(System.in);
 
         System.out.println(gameDescription);
@@ -26,16 +27,12 @@ public class Engine {
                 System.out.println("Correct!");
             } else {
                 System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + correctAnswer
-                        + "'.\nLet's try again, " + Cli.getName() + "!");
+                        + "'.\nLet's try again, " + userName + "!");
                 break;
             }
         }
         if (countRightAnswer == ROUNDS) {
-            System.out.println("Congratulations, " + Cli.getName() + "!");
+            System.out.println("Congratulations, " + userName + "!");
         }
-    }
-
-    public static int getRounds() {
-        return ROUNDS;
     }
 }

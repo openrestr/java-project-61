@@ -3,18 +3,22 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Cli {
-    private static String newName;
 
-    public static void greetings() {
+
+    public static String greetings() {
         Scanner name = new Scanner(System.in);
 
         System.out.println("Welcome to the Brain Games!\nMay I have your name?");
-        newName = name.next();
+        String newName = name.nextLine();
 
         System.out.println("Hello, " + newName + "!");
-    }
-
-    static String getName() {
         return newName;
     }
+
 }
+
+
+
+
+
+
