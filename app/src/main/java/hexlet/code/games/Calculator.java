@@ -1,26 +1,28 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class Calculator {
+    private static final int OPERATORSCOUNT = 2;
+    private static final int MAX_LENGTH = 100;
 
     public static void mathGame() {
         String gameDescription = "What is the result of the expression?";
         String[][] questionsAndAnswers = generateQuestions();
 
+
         Engine.playGame(gameDescription, questionsAndAnswers);
     }
 
     private static String[][] generateQuestions() {
-        final int operatorsCount = 3;
-        final int maxLengthOfGenerator = 11;
 
         String[][] questionsAndAnswers = new String[Engine.ROUNDS][2];
 
         for (int i = 0; i < Engine.ROUNDS; i++) {
-            int operator = (int) (Math.random() * operatorsCount);
-            int number1 = (int) (Math.random() * maxLengthOfGenerator);
-            int number2 = (int) (Math.random() * maxLengthOfGenerator);
+            int operator = Utils.getRandomNumber(0, OPERATORSCOUNT);
+            int number1 = (Utils.getRandomNumber(0, MAX_LENGTH));
+            int number2 = (Utils.getRandomNumber(0, MAX_LENGTH));
             String question;
             int correctAnswer;
 

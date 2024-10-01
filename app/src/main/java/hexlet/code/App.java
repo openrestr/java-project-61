@@ -31,7 +31,7 @@ public class App {
             switch (answer) {
 
                 case "1" -> Cli.greetings();
-                case "2" -> Even.isEven();
+                case "2" -> Even.evenGame();
                 case "3" -> Calculator.mathGame();
                 case "4" -> GCD.gcdGame();
                 case "5" -> Progression.progressionGame();
@@ -41,7 +41,6 @@ public class App {
             }
         }
     }
-
 }
 
 

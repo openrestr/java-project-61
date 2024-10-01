@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 
 public class Progression {
@@ -22,9 +23,9 @@ public class Progression {
 
         for (int i = 0; i < Engine.ROUNDS; i++) {
 
-            int progressionLength = (int) (Math.random() * (maxLength - minLength + 1)) + minLength;
-            int startOfProgression = (int) (Math.random() * maxLength);
-            int progressionStep = (int) (Math.random() * minLength + 1);
+            int progressionLength = Utils.getRandomNumber(minLength, maxLength);
+            int startOfProgression = (Utils.getRandomNumber(0, maxLength));
+            int progressionStep = Utils.getRandomNumber(1, maxLength);
 
             String[] progression = new String[progressionLength];
 
@@ -32,7 +33,7 @@ public class Progression {
                 progression[j] = String.valueOf(startOfProgression + j * progressionStep);
             }
 
-            int hiddenIndex = (int) (Math.random() * progressionLength);
+            int hiddenIndex = Utils.getRandomNumber(0, progressionLength - 1);
             String correctAnswer = progression[hiddenIndex];
             progression[hiddenIndex] = "..";
 
